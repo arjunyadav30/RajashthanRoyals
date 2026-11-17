@@ -65,6 +65,9 @@ class _ConnectionAdapter:
     def executemany(self, query: str, parameters):
         if self.postgres:
             query = query.replace("?", "%s")
+            with self.connection.cursor() as cursor:
+                cursor.executemany(query, parameters)
+            return
         return self.connection.executemany(query, parameters)
 
 

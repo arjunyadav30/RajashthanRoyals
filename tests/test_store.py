@@ -5,6 +5,22 @@ from backend.store import Store, _ConnectionAdapter
 
 
 def test_postgres_connection_adapter_uses_psycopg_placeholders():
+    class RecordingCursor:
+        def __init__(self, calls):
+            self.calls = calls
+
+        def execute(self, query, parameters):
+            self.calls.append(("execute", query, parameters))
+
+        def executemany(self, query, parameters):
+            self.calls.append(("executemany", query, parameters))
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_):
+            return False
+
     class RecordingConnection:
         def __init__(self):
             self.calls = []
@@ -12,8 +28,8 @@ def test_postgres_connection_adapter_uses_psycopg_placeholders():
         def execute(self, query, parameters):
             self.calls.append(("execute", query, parameters))
 
-        def executemany(self, query, parameters):
-            self.calls.append(("executemany", query, parameters))
+        def cursor(self):
+            return RecordingCursor(self.calls)
 
     raw_connection = RecordingConnection()
     connection = _ConnectionAdapter(raw_connection, postgres=True)
