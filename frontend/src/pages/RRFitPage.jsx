@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api } from "../api";
 import { useAuth } from "../auth";
-import { LockBanner, usePublicRows } from "../components/AuthGate";
 import { normaliseName } from "../utils";
 
 const ROLE_LABELS = { batter: "Batter", bowler: "Bowler" };
@@ -65,7 +64,7 @@ export default function RRFitPage() {
   }, [load]);
 
   const allRows = state[role];
-  const { visibleRows, locked } = usePublicRows(allRows);
+  const visibleRows = allRows;
   const fitRows = useMemo(
     () => visibleRows.filter((player) => player.rr_fit.trim()),
     [visibleRows],
@@ -147,14 +146,6 @@ export default function RRFitPage() {
           );
         })}
       </div>
-
-      {locked ? (
-        <LockBanner
-          shown={visibleRows.length}
-          total={allRows.length}
-          noun={`${ROLE_LABELS[role].toLowerCase()}s`}
-        />
-      ) : null}
 
       {state.error ? (
         <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800 dark:border-red-900 dark:bg-red-950/30 dark:text-red-200">

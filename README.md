@@ -119,8 +119,9 @@ the API on another port. A production build is `cd frontend && npm run build`.
 
 Everyone can read the dashboard without an account, but every table is limited
 to its first five rows and each list shows a "Preview mode" lock banner with a
-Sign in button. Signed-in scouts see every row, can edit availability/current
-team, and can download (CSV export, status backup export, print/PDF).
+Sign in button, except Availability and RR Fit: those pages expose the complete
+status, team, note, and fit data to visitors. Sign-in is still required to edit,
+import, or download.
 
 - The header shows a **Log in** button; after signing in it becomes
   **Scout / Sign out**.

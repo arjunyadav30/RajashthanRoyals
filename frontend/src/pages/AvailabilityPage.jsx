@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api, downloadStatusExport } from "../api";
 import { useAuth } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import { PlayerAvatar, StatusPill } from "../components/Badges";
 import CurrentTeamEditor from "../components/CurrentTeamEditor";
 import DataTable from "../components/DataTable";
@@ -22,7 +21,6 @@ import {
   fmtInt,
   isNumber,
   normaliseName,
-  PUBLIC_ROW_LIMIT,
   STATUS_META,
   STATUS_ORDER,
   statusMeta,
@@ -1128,7 +1126,7 @@ export default function AvailabilityPage() {
         <section className="card overflow-hidden" aria-label="Availability editor">
           <DataTable
             columns={columns}
-            rows={authenticated ? filtered : filtered.slice(0, PUBLIC_ROW_LIMIT)}
+            rows={filtered}
             rowKey={(row) => row.name}
             rowClassName={(row) =>
               !["pool", "unknown"].includes(row.status) ? "opacity-75" : undefined
@@ -1149,14 +1147,6 @@ export default function AvailabilityPage() {
             }
             caption="Ranked players with editable availability status"
           />
-          {authenticated ? null : (
-            <LockBanner
-              shown={Math.min(filtered.length, PUBLIC_ROW_LIMIT)}
-              total={filtered.length}
-              noun="players"
-              className="m-4"
-            />
-          )}
         </section>
       )}
 
