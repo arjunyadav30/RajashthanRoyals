@@ -1,0 +1,852 @@
+{
+ "engine_version": "1.0.0",
+ "data_window": {
+  "start": "2022-01-22",
+  "end": "2026-11-01"
+ },
+ "scope": {
+  "data_start": "2022-01-22",
+  "data_end": "2026-11-01",
+  "raw_matches": 883,
+  "eligible_matches": 784,
+  "eligible_deliveries": 187142,
+  "batters": 815,
+  "bowlers": 587,
+  "matches_excluded_no_winner": 41,
+  "matches_excluded_tie": 5,
+  "innings_flags": {
+   "more_than_120_legal_balls": 17,
+   "more_than_10_wickets": 0,
+   "deliveries_after_chase_complete": 0,
+   "innings_missing_target": 0,
+   "innings_checked": 1568
+  },
+  "seasons": [
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ]
+ },
+ "model": {
+  "type": "HistGradientBoostingClassifier + isotonic calibration",
+  "params": {
+   "max_iter": 100,
+   "max_leaf_nodes": 15,
+   "learning_rate": 0.07,
+   "min_samples_leaf": 100,
+   "l2_regularization": 20.0,
+   "random_state": 2022
+  },
+  "train_seasons": [
+   2022,
+   2023
+  ],
+  "calibration_season": 2024,
+  "test_seasons": [
+   2025,
+   2026
+  ],
+  "metrics": {
+   "overall": {
+    "n": 73599,
+    "positives": 35996,
+    "win_rate": 0.4891,
+    "log_loss": 0.5587,
+    "brier": 0.186,
+    "auc": 0.7889,
+    "ece": 0.0247,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499
+   },
+   "IPL": {
+    "n": 33167,
+    "positives": 16221,
+    "win_rate": 0.4891,
+    "log_loss": 0.6092,
+    "brier": 0.1989,
+    "auc": 0.7614,
+    "ece": 0.0648,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499
+   },
+   "T20I": {
+    "n": 40432,
+    "positives": 19775,
+    "win_rate": 0.4891,
+    "log_loss": 0.5174,
+    "brier": 0.1754,
+    "auc": 0.8147,
+    "ece": 0.0281,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499
+   },
+   "innings_1": {
+    "n": 38627,
+    "positives": 18224,
+    "win_rate": 0.4718,
+    "log_loss": 0.6516,
+    "brier": 0.2301,
+    "auc": 0.6715,
+    "ece": 0.0651,
+    "baseline_log_loss": 0.6925,
+    "baseline_brier": 0.2497
+   },
+   "innings_2": {
+    "n": 34972,
+    "positives": 17772,
+    "win_rate": 0.5082,
+    "log_loss": 0.4562,
+    "brier": 0.1372,
+    "auc": 0.8922,
+    "ece": 0.0557,
+    "baseline_log_loss": 0.6934,
+    "baseline_brier": 0.2501
+   }
+  },
+  "prior": 0.4937,
+  "partitions": {
+   "train": {
+    "deliveries": 73205,
+    "matches": 304,
+    "seasons": [
+     2022,
+     2023
+    ]
+   },
+   "calibration": {
+    "deliveries": 40338,
+    "matches": 169,
+    "seasons": [
+     2024
+    ]
+   },
+   "test": {
+    "deliveries": 73599,
+    "matches": 311,
+    "seasons": [
+     2025,
+     2026
+    ]
+   }
+  }
+ },
+ "leverage": {
+  "event_probability_balls": 108905,
+  "cutoff_percentile": 75,
+  "cutoff_leverage": 0.018053,
+  "cutoffs": {
+   "70": 0.014801,
+   "75": 0.018053,
+   "80": 0.021496
+  },
+  "pressure_deliveries": 45621,
+  "pressure_share": 0.2438,
+  "rule_vs_leverage": {
+   "both": 6408,
+   "rule_only": 13248,
+   "leverage_only": 39213,
+   "neither": 128273,
+   "agreement": 0.7197,
+   "jaccard": 0.1089
+  }
+ },
+ "baselines": {
+  "league_priors": {
+   "IPL": {
+    "bat_runs_per_ball": 1.377,
+    "bat_wicket_rate": 0.0513,
+    "bowl_runs_per_ball": 1.378,
+    "bowl_wicket_rate": 0.0496
+   },
+   "T20I": {
+    "bat_runs_per_ball": 1.3182,
+    "bat_wicket_rate": 0.0539,
+    "bowl_runs_per_ball": 1.3186,
+    "bowl_wicket_rate": 0.0522
+   }
+  },
+  "batting_cells": 64,
+  "bowling_cells": 64,
+  "league_bowling_mean": 1.3186,
+  "league_batting_mean": 1.3444
+ },
+ "shrinkage": {
+  "batter": {
+   "k": 500.0,
+   "per_ball_variance": 3.013,
+   "signal_variance": 1.0,
+   "within_match_variance": 265.678,
+   "eligible_n": 100,
+   "reference": {
+    "impact100": 10.248,
+    "wpa100": -0.018,
+    "delta": -1.196,
+    "consistency": 0.453
+   }
+  },
+  "bowler": {
+   "k": 500.0,
+   "per_ball_variance": 26.13,
+   "signal_variance": 1.0,
+   "within_match_variance": 1659.411,
+   "eligible_n": 94,
+   "reference": {
+    "impact100": 1.322,
+    "wpa100": 0.318,
+    "delta": 1.304,
+    "consistency": 0.354
+   }
+  }
+ },
+ "weights": {
+  "primary": {
+   "shrunk_performance": 0.45,
+   "shrunk_wpa": 0.25,
+   "shrunk_delta": 0.2,
+   "consistency": 0.1
+  },
+  "attack": {
+   "shrunk_performance": 0.6,
+   "shrunk_wpa": 0.2,
+   "shrunk_delta": 0.1,
+   "consistency": 0.1
+  },
+  "equal": {
+   "shrunk_performance": 0.25,
+   "shrunk_wpa": 0.25,
+   "shrunk_delta": 0.25,
+   "consistency": 0.25
+  }
+ },
+ "bootstrap": {
+  "reps": 250,
+  "cluster": "match",
+  "perturbation": "Poisson(1)",
+  "interval": "5-95"
+ },
+ "sensitivity": {
+  "stability": {
+   "batter": {
+    "leverage_70": 0.8998663712701331,
+    "leverage_80": 0.9006935762693635,
+    "threshold_100": 0.9992910139124579,
+    "threshold_200": 0.9978015022962732,
+    "weights_attack": 0.9958480228373785,
+    "weights_equal": 0.9803414613279454
+   },
+   "bowler": {
+    "leverage_70": 0.8778968299372535,
+    "leverage_80": 0.8753995029223772,
+    "threshold_100": 0.9981643352957641,
+    "threshold_200": 0.9989488580880929,
+    "weights_attack": 0.9986564061055836,
+    "weights_equal": 0.9693633120051338
+   }
+  }
+ },
+ "reliability": {
+  "batter": {
+   "role": "batter",
+   "split_half_spearman": 0.28,
+   "split_half_n": 84,
+   "season_pairs": [
+    {
+     "pair": "2022-2023",
+     "n": 34,
+     "rho": 0.12085561497326203
+    },
+    {
+     "pair": "2023-2024",
+     "n": 31,
+     "rho": 0.2745967741935484
+    },
+    {
+     "pair": "2024-2025",
+     "n": 32,
+     "rho": -0.07661290322580644
+    },
+    {
+     "pair": "2025-2026",
+     "n": 26,
+     "rho": 0.14803418803418802
+    }
+   ]
+  },
+  "bowler": {
+   "role": "bowler",
+   "split_half_spearman": -0.041,
+   "split_half_n": 79,
+   "season_pairs": [
+    {
+     "pair": "2022-2023",
+     "n": 30,
+     "rho": 0.16974416017797553
+    },
+    {
+     "pair": "2023-2024",
+     "n": 32,
+     "rho": 0.05278592375366568
+    },
+    {
+     "pair": "2024-2025",
+     "n": 41,
+     "rho": 0.10209059233449479
+    },
+    {
+     "pair": "2025-2026",
+     "n": 24,
+     "rho": -0.27043478260869563
+    }
+   ]
+  }
+ },
+ "validation": {
+  "batter": {
+   "available": true,
+   "reference_players": 96,
+   "matched": 96,
+   "qualified_matched": 93,
+   "spearman_rank": 0.539,
+   "top20_overlap": 10,
+   "top20_overlap_pct": 50.0,
+   "largest_rank_gaps": [
+    {
+     "name": "Harry Brook",
+     "old_rank": 18,
+     "engine_qualified_rank": 83,
+     "engine_all_rank": 695,
+     "engine_pressure_balls": 167,
+     "old_pressure_balls": 179,
+     "engine_score": 47.04,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Faf du Plessis",
+     "old_rank": 26,
+     "engine_qualified_rank": 88,
+     "engine_all_rank": 755,
+     "engine_pressure_balls": 349,
+     "old_pressure_balls": 290,
+     "engine_score": 46.02,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Liam Livingstone",
+     "old_rank": 65,
+     "engine_qualified_rank": 5,
+     "engine_all_rank": 6,
+     "engine_pressure_balls": 244,
+     "old_pressure_balls": 209,
+     "engine_score": 56.67,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Dewald Brevis",
+     "old_rank": 84,
+     "engine_qualified_rank": 25,
+     "engine_all_rank": 86,
+     "engine_pressure_balls": 164,
+     "old_pressure_balls": 152,
+     "engine_score": 52.11,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Mitchell Marsh",
+     "old_rank": 19,
+     "engine_qualified_rank": 74,
+     "engine_all_rank": 589,
+     "engine_pressure_balls": 476,
+     "old_pressure_balls": 531,
+     "engine_score": 48.11,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Nitish Rana",
+     "old_rank": 32,
+     "engine_qualified_rank": 87,
+     "engine_all_rank": 752,
+     "engine_pressure_balls": 241,
+     "old_pressure_balls": 235,
+     "engine_score": 46.16,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Ishan Kishan",
+     "old_rank": 8,
+     "engine_qualified_rank": 62,
+     "engine_all_rank": 477,
+     "engine_pressure_balls": 609,
+     "old_pressure_balls": 660,
+     "engine_score": 49.0,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "William Jacks",
+     "old_rank": 96,
+     "engine_qualified_rank": 43,
+     "engine_all_rank": 170,
+     "engine_pressure_balls": 170,
+     "old_pressure_balls": 199,
+     "engine_score": 50.76,
+     "sample_flag": "WIDE"
+    }
+   ]
+  },
+  "bowler": {
+   "available": true,
+   "reference_players": 101,
+   "matched": 101,
+   "qualified_matched": 92,
+   "spearman_rank": 0.467,
+   "top20_overlap": 7,
+   "top20_overlap_pct": 35.0,
+   "largest_rank_gaps": [
+    {
+     "name": "Ravindra Jadeja",
+     "old_rank": 11,
+     "engine_qualified_rank": 87,
+     "engine_all_rank": 575,
+     "engine_pressure_balls": 282,
+     "old_pressure_balls": 295,
+     "engine_score": 45.25,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Akeal Hosein",
+     "old_rank": 79,
+     "engine_qualified_rank": 7,
+     "engine_all_rank": 24,
+     "engine_pressure_balls": 411,
+     "old_pressure_balls": 428,
+     "engine_score": 55.3,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Blessing Muzarabani",
+     "old_rank": 93,
+     "engine_qualified_rank": 27,
+     "engine_all_rank": 179,
+     "engine_pressure_balls": 203,
+     "old_pressure_balls": 199,
+     "engine_score": 52.01,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Mohsin Khan",
+     "old_rank": 28,
+     "engine_qualified_rank": 92,
+     "engine_all_rank": 583,
+     "engine_pressure_balls": 203,
+     "old_pressure_balls": 208,
+     "engine_score": 43.41,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Trent Boult",
+     "old_rank": 81,
+     "engine_qualified_rank": 20,
+     "engine_all_rank": 109,
+     "engine_pressure_balls": 476,
+     "old_pressure_balls": 455,
+     "engine_score": 52.84,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Mustafizur Rahman",
+     "old_rank": 18,
+     "engine_qualified_rank": 77,
+     "engine_all_rank": 544,
+     "engine_pressure_balls": 396,
+     "old_pressure_balls": 382,
+     "engine_score": 46.78,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Rahul Chahar",
+     "old_rank": 96,
+     "engine_qualified_rank": 40,
+     "engine_all_rank": 292,
+     "engine_pressure_balls": 198,
+     "old_pressure_balls": 202,
+     "engine_score": 50.5,
+     "sample_flag": "WIDE"
+    },
+    {
+     "name": "Mujeeb Ur Rahman",
+     "old_rank": 7,
+     "engine_qualified_rank": 63,
+     "engine_all_rank": 458,
+     "engine_pressure_balls": 233,
+     "old_pressure_balls": 250,
+     "engine_score": 48.71,
+     "sample_flag": "WIDE"
+    }
+   ]
+  }
+ },
+ "counts": {
+  "batter": {
+   "scored": 815,
+   "qualified": 100,
+   "below_min": 715,
+   "wide_flags": 815
+  },
+  "bowler": {
+   "scored": 587,
+   "qualified": 94,
+   "below_min": 493,
+   "wide_flags": 587
+  }
+ },
+ "top10": {
+  "batter": [
+   {
+    "rank": 1,
+    "player_id": "2367",
+    "name": "Travis Head",
+    "score": 58.39,
+    "score_lo": 53.63,
+    "score_hi": 63.47,
+    "pressure_balls": 288,
+    "impact100": 51.84,
+    "shrunk_performance": 25.45,
+    "wpa100": 0.576,
+    "delta": 11.19,
+    "consistency": 0.6102,
+    "eb_weight": 0.365,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 2,
+    "player_id": "7216",
+    "name": "Prabhsimran Singh",
+    "score": 58.01,
+    "score_lo": 53.83,
+    "score_hi": 62.45,
+    "pressure_balls": 368,
+    "impact100": 37.07,
+    "shrunk_performance": 21.62,
+    "wpa100": 0.413,
+    "delta": 16.17,
+    "consistency": 0.6481,
+    "eb_weight": 0.424,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 3,
+    "player_id": "6819",
+    "name": "Yashasvi Jaiswal",
+    "score": 57.79,
+    "score_lo": 53.05,
+    "score_hi": 62.18,
+    "pressure_balls": 417,
+    "impact100": 37.8,
+    "shrunk_performance": 22.78,
+    "wpa100": 0.132,
+    "delta": 21.36,
+    "consistency": 0.6301,
+    "eb_weight": 0.455,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 4,
+    "player_id": "1077",
+    "name": "David Miller",
+    "score": 57.74,
+    "score_lo": 51.96,
+    "score_hi": 63.23,
+    "pressure_balls": 283,
+    "impact100": 37.15,
+    "shrunk_performance": 19.97,
+    "wpa100": 0.823,
+    "delta": 41.88,
+    "consistency": 0.5208,
+    "eb_weight": 0.361,
+    "role": "Finisher",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 5,
+    "player_id": "4391",
+    "name": "Liam Livingstone",
+    "score": 56.67,
+    "score_lo": 51.8,
+    "score_hi": 61.33,
+    "pressure_balls": 244,
+    "impact100": 41.47,
+    "shrunk_performance": 20.49,
+    "wpa100": 0.281,
+    "delta": 34.51,
+    "consistency": 0.566,
+    "eb_weight": 0.328,
+    "role": "Middle-overs batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 6,
+    "player_id": "6281",
+    "name": "Abhishek Sharma",
+    "score": 56.5,
+    "score_lo": 51.82,
+    "score_hi": 61.56,
+    "pressure_balls": 533,
+    "impact100": 41.88,
+    "shrunk_performance": 26.57,
+    "wpa100": 0.428,
+    "delta": -12.82,
+    "consistency": 0.55,
+    "eb_weight": 0.516,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 7,
+    "player_id": "4708",
+    "name": "Rinku Singh",
+    "score": 56.28,
+    "score_lo": 52.18,
+    "score_hi": 60.54,
+    "pressure_balls": 266,
+    "impact100": 27.57,
+    "shrunk_performance": 16.26,
+    "wpa100": 0.917,
+    "delta": 24.93,
+    "consistency": 0.549,
+    "eb_weight": 0.347,
+    "role": "Finisher",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 8,
+    "player_id": "6396",
+    "name": "Tim David",
+    "score": 55.67,
+    "score_lo": 49.84,
+    "score_hi": 62.94,
+    "pressure_balls": 309,
+    "impact100": 38.61,
+    "shrunk_performance": 21.08,
+    "wpa100": 0.601,
+    "delta": 8.41,
+    "consistency": 0.5,
+    "eb_weight": 0.382,
+    "role": "Finisher",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 9,
+    "player_id": "22565",
+    "name": "Muhammad Waseem",
+    "score": 55.34,
+    "score_lo": 50.42,
+    "score_hi": 61.42,
+    "pressure_balls": 176,
+    "impact100": 40.64,
+    "shrunk_performance": 18.16,
+    "wpa100": 0.269,
+    "delta": 29.66,
+    "consistency": 0.5652,
+    "eb_weight": 0.26,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 10,
+    "player_id": "5553",
+    "name": "Phil Salt",
+    "score": 54.98,
+    "score_lo": 50.87,
+    "score_hi": 60.08,
+    "pressure_balls": 393,
+    "impact100": 32.09,
+    "shrunk_performance": 19.86,
+    "wpa100": 0.266,
+    "delta": -2.82,
+    "consistency": 0.5714,
+    "eb_weight": 0.44,
+    "role": "Powerplay batter",
+    "SAMPLE_FLAG": "WIDE"
+   }
+  ],
+  "bowler": [
+   {
+    "rank": 1,
+    "player_id": "830",
+    "name": "Josh Hazlewood",
+    "score": 60.12,
+    "score_lo": 53.52,
+    "score_hi": 67.74,
+    "pressure_balls": 395,
+    "impact100": 76.48,
+    "shrunk_performance": 34.49,
+    "wpa100": 1.066,
+    "delta": 67.53,
+    "consistency": 0.5,
+    "eb_weight": 0.441,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 2,
+    "player_id": "2681",
+    "name": "Taskin Ahmed",
+    "score": 57.88,
+    "score_lo": 52.04,
+    "score_hi": 64.18,
+    "pressure_balls": 231,
+    "impact100": 76.53,
+    "shrunk_performance": 25.09,
+    "wpa100": 0.983,
+    "delta": 89.59,
+    "consistency": 0.4884,
+    "eb_weight": 0.316,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 3,
+    "player_id": "4722",
+    "name": "Rashid Khan",
+    "score": 57.81,
+    "score_lo": 53.11,
+    "score_hi": 63.2,
+    "pressure_balls": 520,
+    "impact100": 58.25,
+    "shrunk_performance": 30.34,
+    "wpa100": 0.831,
+    "delta": 45.74,
+    "consistency": 0.433,
+    "eb_weight": 0.51,
+    "role": "Middle bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 4,
+    "player_id": "22920",
+    "name": "Jacob Duffy",
+    "score": 56.27,
+    "score_lo": 50.61,
+    "score_hi": 61.36,
+    "pressure_balls": 203,
+    "impact100": 71.68,
+    "shrunk_performance": 21.64,
+    "wpa100": 0.625,
+    "delta": 62.68,
+    "consistency": 0.5,
+    "eb_weight": 0.289,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 5,
+    "player_id": "6256",
+    "name": "Varun Chakravarthy",
+    "score": 55.43,
+    "score_lo": 50.2,
+    "score_hi": 60.61,
+    "pressure_balls": 443,
+    "impact100": 47.63,
+    "shrunk_performance": 23.08,
+    "wpa100": 0.568,
+    "delta": 24.34,
+    "consistency": 0.4416,
+    "eb_weight": 0.47,
+    "role": "Middle bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 6,
+    "player_id": "4807",
+    "name": "Joshua Little",
+    "score": 55.41,
+    "score_lo": 48.71,
+    "score_hi": 62.4,
+    "pressure_balls": 160,
+    "impact100": 82.31,
+    "shrunk_performance": 20.96,
+    "wpa100": 0.756,
+    "delta": 97.44,
+    "consistency": 0.4194,
+    "eb_weight": 0.242,
+    "role": "Death bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 7,
+    "player_id": "2417",
+    "name": "Akeal Hosein",
+    "score": 55.3,
+    "score_lo": 49.84,
+    "score_hi": 61.08,
+    "pressure_balls": 411,
+    "impact100": 43.24,
+    "shrunk_performance": 20.23,
+    "wpa100": 0.513,
+    "delta": 41.91,
+    "consistency": 0.4444,
+    "eb_weight": 0.451,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 8,
+    "player_id": "8661",
+    "name": "Matheesha Pathirana",
+    "score": 55.0,
+    "score_lo": 49.04,
+    "score_hi": 61.92,
+    "pressure_balls": 265,
+    "impact100": 61.58,
+    "shrunk_performance": 22.2,
+    "wpa100": 0.749,
+    "delta": 29.9,
+    "consistency": 0.4091,
+    "eb_weight": 0.346,
+    "role": "Death bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 9,
+    "player_id": "2399",
+    "name": "Dushmantha Chameera",
+    "score": 54.81,
+    "score_lo": 48.34,
+    "score_hi": 60.17,
+    "pressure_balls": 260,
+    "impact100": 36.69,
+    "shrunk_performance": 13.42,
+    "wpa100": 0.569,
+    "delta": 48.75,
+    "consistency": 0.4792,
+    "eb_weight": 0.342,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   },
+   {
+    "rank": 10,
+    "player_id": "19312",
+    "name": "Nuwan Thushara",
+    "score": 54.77,
+    "score_lo": 48.8,
+    "score_hi": 59.94,
+    "pressure_balls": 153,
+    "impact100": 84.61,
+    "shrunk_performance": 20.84,
+    "wpa100": 0.249,
+    "delta": 116.61,
+    "consistency": 0.4167,
+    "eb_weight": 0.234,
+    "role": "Powerplay bowler",
+    "SAMPLE_FLAG": "WIDE"
+   }
+  ]
+ },
+ "recent_form": "Reported only (form2026_*). It is not an input to the score.",
+ "raw_data": "All outputs are aggregates. No delivery-level or /data_raw rows are written.",
+ "generated_at": "2026-11-16T14:35:22+00:00"
+}

@@ -1,0 +1,135 @@
+{
+  "overall": {
+    "n": 73599,
+    "positives": 35996,
+    "win_rate": 0.4891,
+    "log_loss": 0.5587,
+    "brier": 0.186,
+    "auc": 0.7889,
+    "ece": 0.0247,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499,
+    "reliability": [
+      {
+        "predicted": 0.0385,
+        "observed": 0.0397,
+        "n": 7360
+      },
+      {
+        "predicted": 0.1733,
+        "observed": 0.1874,
+        "n": 7360
+      },
+      {
+        "predicted": 0.3376,
+        "observed": 0.3182,
+        "n": 7360
+      },
+      {
+        "predicted": 0.4212,
+        "observed": 0.4048,
+        "n": 7360
+      },
+      {
+        "predicted": 0.5086,
+        "observed": 0.4678,
+        "n": 7360
+      },
+      {
+        "predicted": 0.5419,
+        "observed": 0.5208,
+        "n": 7360
+      },
+      {
+        "predicted": 0.6232,
+        "observed": 0.6189,
+        "n": 7360
+      },
+      {
+        "predicted": 0.7226,
+        "observed": 0.6946,
+        "n": 7360
+      },
+      {
+        "predicted": 0.7242,
+        "observed": 0.6861,
+        "n": 7360
+      },
+      {
+        "predicted": 0.8892,
+        "observed": 0.9527,
+        "n": 7359
+      }
+    ]
+  },
+  "IPL": {
+    "n": 33167,
+    "positives": 16221,
+    "win_rate": 0.4891,
+    "log_loss": 0.6092,
+    "brier": 0.1989,
+    "auc": 0.7614,
+    "ece": 0.0648,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499
+  },
+  "T20I": {
+    "n": 40432,
+    "positives": 19775,
+    "win_rate": 0.4891,
+    "log_loss": 0.5174,
+    "brier": 0.1754,
+    "auc": 0.8147,
+    "ece": 0.0281,
+    "baseline_log_loss": 0.693,
+    "baseline_brier": 0.2499
+  },
+  "innings_1": {
+    "n": 38627,
+    "positives": 18224,
+    "win_rate": 0.4718,
+    "log_loss": 0.6516,
+    "brier": 0.2301,
+    "auc": 0.6715,
+    "ece": 0.0651,
+    "baseline_log_loss": 0.6925,
+    "baseline_brier": 0.2497
+  },
+  "innings_2": {
+    "n": 34972,
+    "positives": 17772,
+    "win_rate": 0.5082,
+    "log_loss": 0.4562,
+    "brier": 0.1372,
+    "auc": 0.8922,
+    "ece": 0.0557,
+    "baseline_log_loss": 0.6934,
+    "baseline_brier": 0.2501
+  },
+  "prior": 0.4937,
+  "partitions": {
+    "train": {
+      "deliveries": 73205,
+      "matches": 304,
+      "seasons": [
+        2022,
+        2023
+      ]
+    },
+    "calibration": {
+      "deliveries": 40338,
+      "matches": 169,
+      "seasons": [
+        2024
+      ]
+    },
+    "test": {
+      "deliveries": 73599,
+      "matches": 311,
+      "seasons": [
+        2025,
+        2026
+      ]
+    }
+  }
+}

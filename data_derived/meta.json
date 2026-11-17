@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-11-17T11:12:41Z",
+  "data_end": "2026-11-01",
+  "twelve_month_cutoff": "2025-11-01",
+  "players": 889,
+  "eligible_matches": 814,
+  "eligible_deliveries": 190261,
+  "exclusions": {
+    "super_overs": "innings 3 and 4 removed",
+    "emerging_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "Mens T20 Emerging Teams Asia Cup 2024"
+    ],
+    "dls_or_shortened": "matches with non-null revised_target removed"
+  },
+  "pressure_definition": "2nd innings overs 16-20 with 0.8-2.0 runs needed per remaining ball; or 2nd innings required rate > 10 with fewer than 5 wickets in hand; or 3+ wickets down in overs 1-6.",
+  "stats": {
+    "players": 883,
+    "splits": 22,
+    "small_sample_threshold_balls": 30,
+    "bat_percentile_balls": 100,
+    "bowl_percentile_balls": 120,
+    "definitions": {
+      "batting": {
+        "matches": "Matches in which the player appeared in the XI within the split.",
+        "innings": "Batting innings with at least one delivery as striker.",
+        "not_outs": "Batting innings in which the striker was not dismissed.",
+        "runs": "Bat runs only; wides, no-balls, byes and leg-byes are excluded.",
+        "balls": "Balls faced: wides excluded, no-balls included (standard batter ball count).",
+        "strike_rate": "Runs per 100 balls faced.",
+        "average": "Runs divided by dismissals.",
+        "highest": "Highest score in an innings in the split.",
+        "thirties": "Scores from 30 to 49.",
+        "fifties": "Scores from 50 to 99.",
+        "hundreds": "Scores of 100 or more.",
+        "ducks": "Dismissed for 0.",
+        "golden_ducks": "Dismissed for 0 having faced at most one ball.",
+        "fours": "Batter-hit fours.",
+        "sixes": "Batter-hit sixes.",
+        "boundary_pct": "Boundary runs (4s and 6s) as a share of bat runs.",
+        "balls_per_boundary": "Balls faced per boundary hit.",
+        "dot_pct": "Share of balls faced with zero bat runs.",
+        "singles": "Balls scoring exactly one run.",
+        "twos": "Balls scoring exactly two runs.",
+        "threes": "Balls scoring exactly three runs.",
+        "balls_per_dismissal": "Balls faced per dismissal.",
+        "position": "Most used batting position in the XI within the split.",
+        "entry": "Average entry point, in overs, at the first ball faced in an innings."
+      }
+    }
+  }
+}

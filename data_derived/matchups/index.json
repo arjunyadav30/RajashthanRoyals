@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-11-16T14:46:08Z",
+  "data_window": {
+    "start": "2022-01-22",
+    "end": "2026-11-01"
+  },
+  "min_balls": 6,
+  "players": 881,
+  "batting_pairs": 11312,
+  "bowling_pairs": 11281,
+  "source_deliveries": 187142,
+  "source_pairs": {
+    "batting": 24246,
+    "bowling": 24243
+  }
+}
