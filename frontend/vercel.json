@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://rajashthanroyals.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
