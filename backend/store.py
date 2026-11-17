@@ -343,6 +343,7 @@ class Store:
         # status_file/history_file are legacy JSON locations used once to seed the
         # database. The live store is always the SQLite file.
         self.status_file = Path(status_file) if status_file else self.root / "status.json"
+        self.seed_status_file = self.root / "backend" / "data" / "public_status_seed.json"
         self.history_file = (
             Path(history_file) if history_file else self.root / "status_history.json"
         )
@@ -898,18 +899,34 @@ class Store:
                     )
 
     def _read_legacy_status(self) -> dict[str, dict]:
-        loaded: dict[str, dict] = {}
-        if not self.status_file.exists():
-            return loaded
-        try:
-            raw = json.loads(self.status_file.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            return loaded
-        if isinstance(raw, dict):
-            for name, entry in raw.items():
-                if isinstance(entry, dict):
-                    loaded[str(name).strip()] = _normalise_entry(entry)
-        return loaded
+        for path, is_seed in (
+            (self.status_file, False),
+            (self.seed_status_file, True),
+        ):
+            if not path.exists():
+                continue
+            try:
+                raw = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                if is_seed:
+                    raise RuntimeError(f"Unable to read public status seed: {path}") from exc
+                continue
+
+            if is_seed:
+                if not isinstance(raw, dict) or not isinstance(raw.get("players"), dict):
+                    raise RuntimeError(f"Public status seed has an invalid format: {path}")
+                raw = raw["players"]
+
+            loaded = {}
+            if isinstance(raw, dict):
+                for name, entry in raw.items():
+                    if isinstance(entry, dict):
+                        loaded[str(name).strip()] = _normalise_entry(entry)
+            if loaded:
+                return loaded
+            if is_seed:
+                raise RuntimeError(f"Public status seed contains no player records: {path}")
+        return {}
 
     def _read_legacy_history(self) -> dict[str, list[dict]]:
         loaded: dict[str, list[dict]] = {}

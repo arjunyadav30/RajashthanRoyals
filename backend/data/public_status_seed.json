@@ -1,0 +1,2686 @@
+{
+  "exported_at": "2026-11-17T12:23:27.080409+00:00",
+  "players": {
+    "Aamer Jamal": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abbas Afridi": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abdul Samad": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abdullah Shafique": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abhinandan Singh": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abhinav Manohar": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abhishek Sharma": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abishek Porel": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Abrar Ahmed": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Adam Milne": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ahmed Daniyal": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Aiden Markram": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ajinkya Rahane": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Akash Deep": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Akash Madhwal": {
+      "status": "pool",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Akash Singh": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Akeal Hosein": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Akshat Raghuwanshi": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Alexander Patmore": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Allah Ghazanfar": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Alzarri Joseph": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Aman Khan": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ambati Rayudu": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Amit Mishra": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Andre Russell": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Angkrish Raghuvanshi": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Aniket Verma": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Anmolpreet Singh": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Anrich Nortje": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Anshul Kamboj": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Anuj Rawat": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Anukul Roy": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Arafat Minhas": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Arjun Tendulkar": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Arshad Khan": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Arshdeep Singh": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Arshin Kulkarni": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ashok Sharma": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ashutosh Sharma": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ashwani Kumar": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Asif Ali": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Auqib Nabi": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Avesh Khan": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Axar Patel": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ayush Badoni": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ayush Mhatre": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Azam Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Azmatullah Omarzai": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Babar Azam": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ben Duckett": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ben Dwarshuis": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Benjamin Ito": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Bhuvneshwar Kumar": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Blessing Muzarabani": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Brandon McMullen": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Brian Bennett": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Zimbabwe international batter. No IPL appearance or IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. No IPL retirement issue identified in the supplied data. Treat him as a potential first-time IPL entrant; IPL 2027 auction registration and availability are not yet verified.",
+      "rr_fit": "Right-handed top-order batter from Zimbabwe who offers opening and top-order flexibility. In the supplied 2023–2026 T20 dataset, he scored 1,019 runs from 793 balls across 44 matches, averaging 24.26 at a strike rate of 128.50. His best season by run volume was 2024, when he scored 447 runs in 19 matches; he added 373 runs in 2025 and 171 runs in 2026. He also offers part-time right-arm bowling, with 7 wickets from 132 legal balls in the supplied dataset. His batting strike rate and average suggest that his ability to accelerate consistently needs further assessment."
+    },
+    "Brijesh Sharma": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Brydon Carse": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Cameron Green": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Charles Hinze": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Chetan Sakariya": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Connor Esterhuizen": {
+      "status": "pool",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Cooper Connolly": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Corbin Bosch": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Daniel Sams": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Australian international. Previously represented Delhi Capitals, Royal Challengers Bengaluru and Mumbai Indians in the IPL. No IPL appearance found in the supplied 2025 or 2026 data. No confirmed IPL retirement identified. Not Pakistani. IPL 2027 auction registration and availability remain unverified.",
+      "rr_fit": "Australian left-arm pace bowling all-rounder who provides lower-order hitting and bowling depth. Took 13 wickets at an economy of 8.77 in the supplied IPL 2022-2026 dataset. His 2026 T20 season was impressive, with 37 wickets in 29 matches and a bowling economy of 8.36. Can strengthen RR's pace-bowling options and provide batting depth. IPL batting output has been limited, so his primary value should be considered as a bowling all-rounder."
+    },
+    "Danish Malewar": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Daryl Mitchell": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "New Zealand international. Previously represented Rajasthan Royals in 2022 and Chennai Super Kings in 2024. Played 15 IPL matches overall. Reported unsold at the December 2025 auction and no IPL appearance found in the supplied 2026 data. No confirmed IPL retirement identified. Not Pakistani. IPL 2027 auction registration and availability remain unverified.",
+      "rr_fit": "Right-handed middle-order batter with 15 IPL matches and 351 runs. Has experience playing for Rajasthan Royals and Chennai Super Kings. His 2026 T20 performances show improved scoring ability, including a strike rate of 164.20 across 18 matches. Can strengthen the No. 4 or No. 5 position and provide batting stability with acceleration. Occasional medium pace is an additional option, but should not be considered a frontline bowler."
+    },
+    "Dasun Shanaka": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "David Miller": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "David Payne": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "David Warner": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "David Willey": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Deepak Chahar": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Deepak Hooda": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Devdutt Padikkal": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Devon Conway": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dewald Brevis": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dhruv Jurel": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dian Forrester": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Digvesh Rathi": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dilshan Madushanka": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dinesh Karthik": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Donovan Ferreira": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dushmantha Chameera": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Dwayne Bravo": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Eoin Morgan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Eshan Malinga": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Faf du Plessis": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Faheem Ashraf": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Fakhar Zaman": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "FazalHaq Farooqi": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Finn Allen": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "George Linde": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "George Munsey": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Gerald Coetzee": {
+      "status": "pool",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Glenn Maxwell": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Glenn Phillips": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Gurjapneet Singh": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Gurnoor Brar": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Gus Atkinson": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Haider Ali": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Hardik Pandya": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Haris Rauf": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Harpreet Brar": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Harry Brook": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Harsh Dubey": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Harshal Patel": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Harshit Rana": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Hasan Ali": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Hasan Nawaz": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Haseebullah Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Heinrich Klaasen": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Himmat Singh": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Hussain Talat": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ibrahim Takahashi": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Iftikhar Ahmed": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ihsanullah Ihsanullah": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Imad Wasim": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ishan Kishan": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ishant Sharma": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jack Edwards": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jacob Bethell": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jacob Duffy": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jahandad Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jamie Overton": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jamie Smith": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jason Holder": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jasprit Bumrah": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jayant Yadav": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jayden Lennox": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jaydev Unadkat": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jhye Richardson": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jitesh Sharma": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jofra Archer": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jonny Bairstow": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jordan Cox": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Jos Buttler": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Josh Hazlewood": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Josh Inglis": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "KM Asif": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kagiso Rabada": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kamindu Mendis": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kamlesh Nagarkoti": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kane Williamson": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Karn Sharma": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kartik Sharma": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kartik Tyagi": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Karun Nair": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kedar Jadhav": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kendel Fleming": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Keshav Maharaj": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Khaleel Ahmed": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Khawaja Nafay": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Khushdil Shah": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kieron Pollard": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Krish Bhagat": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Krunal Pandya": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kuldeep Sen": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kuldeep Yadav": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kuldip Yadav": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kulwant Khejroliya": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kumar Kushagra": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kusal Mendis": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "Sri Lankan international wicketkeeper-batter. No IPL 2026 squad mapping or IPL appearance identified in the supplied dataset. Not a Pakistani player. No confirmed IPL retirement identified. Treat him as a potential first-time IPL entrant; IPL 2027 auction registration and availability are not yet verified.",
+      "rr_fit": "Right-handed wicketkeeper-batter who can provide an aggressive top-order option and wicketkeeping cover. Scored 1,779 runs from 1,327 balls in the supplied T20 dataset, with an average of 29.65 and a strike rate of 134.06. Offers flexibility at the top of the order and can strengthen batting depth. However, his strike rate suggests he should be assessed further for the high-impact powerplay role RR may require. Zero IPL experience in the supplied dataset is a major adaptation risk."
+    },
+    "Kwena Maphaka": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kyle Jamieson": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Kyle Mayers": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "West Indies international. Played 13 IPL matches for Lucknow Super Giants in 2023. No IPL appearance found in the supplied 2025 or 2026 dataset. No confirmed IPL retirement identified. Not Pakistani. IPL 2027 auction registration and availability are unverified.",
+      "rr_fit": "Left-handed opening batter with 13 IPL appearances and 379 runs at a strike rate of 144.11. Provides an aggressive powerplay option and can contribute occasional right-arm medium pace. His T20 experience and BPL performances add value, but inconsistent recent CPL scores and lack of IPL wickets as a bowler are concerns. Suitable as an overseas opening option if RR need a left-hand batter."
+    },
+    "Lachlan Lake": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Lhuan Pretorius": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Liam Livingstone": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Lockie Ferguson": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Lokesh Rahul": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Luke Wood": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Lungi Ngidi": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "M Shahrukh Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Maaz Sadaqat": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Madhav Tiwari": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Maheesh Theekshana": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mahendra Singh Dhoni": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mahipal Lomror": {
+      "status": "pool",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Manan Vohra": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Manav Suthar": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Manimaran Siddharth": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Manish Pandey": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Manoj Bhandage": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Marco Jansen": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Marcus Stoinis": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mark Chapman": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "New Zealand international. No IPL appearances, no IPL 2026 squad mapping and no IPL ranking entry found in the supplied dataset. No IPL retirement issue identified. Not Pakistani. IPL 2027 auction registration and availability are unverified. Treat as a potential first-time IPL auction candidate, not a confirmed auction entrant.",
+      "rr_fit": "Left-handed overseas middle-order batter with strong T20 international experience. Particularly effective in middle overs, scoring at a 146.1 strike rate in T20Is during overs 7–15. Can provide batting depth at No. 4 or No. 5 and improve left-right batting combinations. Suitable for RR's middle-order scoring requirements. Not a frontline bowling option. IPL experience is zero, so adaptation risk must be considered."
+    },
+    "Mark Wood": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "England international fast bowler. Played 4 IPL matches for Lucknow Super Giants in 2023 according to the supplied dataset. No IPL 2026 squad mapping found. Not a Pakistani player. No confirmed IPL retirement identified in the supplied data. IPL 2027 auction registration and availability are unverified. Keep availability status as Unknown until official confirmation.",
+      "rr_fit": "Right-arm fast bowler from England who offers genuine pace and wicket-taking ability. In the supplied 2022–2026 T20 dataset, he took 27 wickets in 13 matches from 282 legal deliveries, conceding 379 runs at an economy of 8.06 and a bowling strike rate of 10.44. His IPL record in the supplied dataset includes 4 matches for Lucknow Super Giants in 2023, with 11 wickets from 97 legal balls at an economy of 7.98. His pace can strengthen RR's fast-bowling attack, particularly as a wicket-taking option. However, workload, fitness and availability need careful assessment before making him a priority target."
+    },
+    "Matheesha Pathirana": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Matt Henry": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Matthew Breetzke": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Matthew Humphreys": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Irish international. No IPL appearances or existing IPL franchise association identified. Not a Pakistani player. IPL 2027 auction registration is not yet confirmed; do not treat him as a registered auction entrant until the official list is released.",
+      "rr_fit": "Young left-arm orthodox spinner who can strengthen RR's spin options in the middle overs. Has shown wicket-taking ability against international opposition, including India, Bangladesh and UAE. Offers a different bowling angle and long-term potential, but needs IPL-level testing."
+    },
+    "Matthew Short": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Matthew Wade": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mayank Dagar": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mayank Markande": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mayank Rawat": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mayank Yadav": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Michael Bracewell": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "Left-handed batting all-rounder from New Zealand who offers a combination of middle-order batting and right-arm off-spin. In the supplied 2022–2026 T20 ball-by-ball dataset, he scored 472 runs from 350 balls across 33 matches, averaging 22.48 at a strike rate of 134.86. With the ball, he took 39 wickets from 678 legal deliveries across 41 matches, conceding 904 runs at an economy of 8.00 and a bowling strike rate of 17.38. His ability to contribute in both departments gives RR flexibility in team combination. However, his batting consistency and ability to accelerate against high-quality bowling need further evaluation.",
+      "rr_fit": "New Zealand international all-rounder. Played 5 IPL matches for Royal Challengers Bengaluru in 2023, scoring 58 runs and taking 6 wickets at an economy of 8.64. He was also listed in the official IPL 2026 auction list with a base price of ₹2 crore. No IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. IPL 2027 auction registration and availability remain unverified. Treat his current status as Unknown until the 2027 auction list is confirmed."
+    },
+    "Mitchell Marsh": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mitchell Owen": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mitchell Santner": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mitchell Starc": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Moeen Ali": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Ali": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Amir": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Haris": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Hasnain": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Imran Randhawa": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Nawaz": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Rizwan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammad Saif Hassan": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Bangladesh international batter. No IPL appearance or IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. No IPL retirement issue identified in the supplied data. Treat him as a potential first-time IPL entrant; IPL 2027 auction registration and availability are not yet verified.",
+      "rr_fit": "Right-handed top-order batter from Bangladesh who has primarily batted at No. 1, No. 3 and No. 4 in the supplied dataset. Across 26 T20 matches from 2024–2026, he scored 608 runs from 498 balls, averaging 24.32 at a strike rate of 122.09. His 2025 season contributed 391 runs from 313 balls across 15 matches, while he scored 167 runs in 8 matches in 2026. He also offers occasional right-arm off-break bowling, taking 4 wickets from 123 legal deliveries at an economy of 7.61. His batting strike rate and average indicate that he needs further evaluation as an IPL top-order option."
+    },
+    "Mohammad Wasim": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammed Shami": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohammed Siraj": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohit Rathee": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohit Sharma": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mohsin Khan": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Muhammad Irfan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Muhammad Waseem": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mujeeb Ur Rahman": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "Afghanistan international off-spinner. Has represented Kings XI Punjab/Punjab Kings, Sunrisers Hyderabad and Kolkata Knight Riders in the IPL. Was registered at a base price of ₹2 crore for the IPL 2026 auction but went unsold. No IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. IPL 2027 auction registration and availability remain unverified. Treat his status as a potential auction candidate, subject to official confirmation.",
+      "rr_fit": "Right-arm off-spin bowler from Afghanistan who offers mystery spin, variations and the ability to bowl during different phases of the innings. In the supplied 2022–2026 T20 dataset, he should be evaluated as a specialist overseas spinner who can provide middle-over wicket-taking options. His variations can make him difficult to line up, while his experience across international and franchise T20 cricket adds value. However, his economy, performance against quality right- and left-handed batters, and consistency under pressure need to be assessed before considering him a priority signing."
+    },
+    "Mukesh Choudhary": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mukesh Kumar": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mukul Choudhary": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Murugan Ashwin": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Musheer Khan": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Mustafizur Rahman": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Najibullah Zadran": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Naman Dhir": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Namboori Tilak Varma": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nandre Burger": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Naseem Shah": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nathan Ellis": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nathan Smith": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Navdeep Saini": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nehal Wadhera": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nicholas Pooran": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nishant Kumar Sindhu": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nitish Rana": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nitish Reddy": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Noor Ahmad": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Nuwan Thushara": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Omair Yousuf": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Pathum Nissanka": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Patrick Cummins": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Phil Salt": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Piyush Chawla": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prabhsimran Singh": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Praful Hinge": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prashant Solanki": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prashant Veer": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prasidh Krishna": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Praveen Dubey": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prince Yadav": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Prithvi Shaw": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Priyansh Arya": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Qasim Akram": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Quinton de Kock": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rachin Ravindra": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Raghu Sharma": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rahmanullah Gurbaz": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rahul Chahar": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rahul Tewatia": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rahul Tripathi": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Raj Bawa": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rajat Patidar": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rajvardhan Hangargekar": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ramakrishna Ghosh": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ramandeep Singh": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ramesh Mendis": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rashid Khan": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rasikh Salam": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ravi Bishnoi": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ravi Singh": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ravichandran Ashwin": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ravichandran Smaran": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ravindra Jadeja": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Razaullah Razaullah": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Reeza Hendricks": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "South African international batter. No IPL appearance or IPL 2026 squad mapping was found in the supplied dataset. Not a Pakistani player. No IPL retirement issue identified in the supplied data. Treat him as a potential first-time IPL entrant; IPL 2027 auction registration and availability are not yet verified.",
+      "rr_fit": "Right-handed top-order batter who can provide stability and experience at the top of the batting order. In the supplied 2022–2026 T20 dataset, he scored 1,224 runs from 835 balls across 34 matches, averaging 36.00 at a strike rate of 146.59. His scoring rate and consistency make him a potential powerplay and top-order option for RR. However, his role should be evaluated against RR's existing opening combination and the need for an overseas top-order slot."
+    },
+    "Rehan Ahmed": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Richard Gleeson": {
+      "status": "pool",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Riley Meredith": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rinku Singh": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rishabh Pant": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Riyan Parag": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Robin Minz": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Robin Uthappa": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rohit Sharma": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Romario Shepherd": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Rovman Powell": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ruturaj Gaikwad": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Ryan Rickelton": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sahibzada Farhan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sahil Parakh": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sai Kishore": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sai Sudharsan": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Saim Ayub": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sakib Hussain": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Salil Arora": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Salman Agha": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Salman Mirza": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sam Curran": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sameer Rizvi": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sandeep Sharma": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sanju Samson": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sanvir Singh": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sarfaraz Khan": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Saurabh Dubey": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sean Abbott": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Australian international fast-medium bowler. Has represented Royal Challengers Bengaluru and Sunrisers Hyderabad in the IPL, with 3 career IPL appearances according to Cricbuzz. Was registered for the IPL 2026 auction at a base price of ₹2 crore but went unsold. No IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. IPL 2027 auction registration and availability are unverified. Treat his status as Unknown until official confirmation.",
+      "rr_fit": "Right-arm fast-medium bowling all-rounder from Australia who offers pace variations, lower-order batting and experience in franchise T20 cricket. In the supplied 2022–2026 T20 dataset, he should be assessed for powerplay and death-over responsibilities. He has a reputation for using variations and can contribute as a lower-order hitter. However, his recent T20 numbers need careful evaluation, particularly his economy, wicket-taking consistency and performance under pressure. He is more valuable as a bowling all-rounder than as a specialist batter."
+    },
+    "Sediqullah Atal": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shadab Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shahbaz Ahmed": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shaheen Afridi": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shahnawaz Dhani": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shai Hope": {
+      "status": "pool",
+      "current_team": "Released / in auction pool",
+      "current_team_type": null,
+      "note": "West Indies international. Played 9 IPL matches for Delhi Capitals in 2024. No IPL appearance found in the supplied 2025 or 2026 candidate data. No confirmed IPL retirement identified. Not a Pakistani player. IPL 2027 auction registration and availability are unverified. Keep status as Unknown until official auction registration or franchise confirmation.",
+      "rr_fit": "Experienced right-hand wicketkeeper-batter who offers top-order batting and wicketkeeping cover. Strong T20I experience and recent international form make him a useful backup option. However, his IPL experience is limited to 9 matches, so he does not meet the 10-match minimum criterion. Better suited as a secondary overseas target than a priority signing."
+    },
+    "Shan Masood": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shardul Thakur": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shashank Singh": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sherfane Rutherford": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shikhar Dhawan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shimron Hetmyer": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shivam Dube": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shivam Mavi": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shivang Kumar": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shreyas Gopal": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shreyas Iyer": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shubham Dubey": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Shubman Gill": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Simarjeet Singh": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Simi Singh": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Spencer Johnson": {
+      "status": "pool",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sufiyan Muqeem": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sunil Narine": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Suryakumar Yadav": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Suryansh Shedge": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Sushant Mishra": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Suyash Sharma": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Swapnil Singh": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "T Natarajan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tanush Kotian": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Taskin Ahmed": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "Bangladesh international right-arm fast bowler. Has no IPL appearances in his career and no IPL 2026 squad mapping in the supplied dataset. Not a Pakistani player. He was registered for the IPL 2026 auction at a base price of ₹75 lakh but went unsold. Reports published on 12 November 2026 indicate that he has registered for the IPL 2027 mini-auction. Registration does not guarantee inclusion in the final auction pool or a franchise contract.",
+      "rr_fit": "Right-arm fast bowler from Bangladesh who offers pace, bounce and experience in international and franchise T20 cricket. In the supplied 2022–2026 T20 dataset, he took 67 wickets from 1,041 legal balls, conceding 1,388 runs at an economy of 7.97 and a bowling strike rate of 15.54. His wicket-taking record and economy make him an interesting option for RR's pace attack. He can be evaluated for powerplay and middle-over responsibilities, with death-over execution requiring separate assessment. His recent T20I form in 2026 was less encouraging, as he went wicketless in three matches while conceding runs at an economy of 7.00."
+    },
+    "Tayyab Tahir": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tejasvi Dahiya": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tim David": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tim Robinson": {
+      "status": "unknown",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "New Zealand international batter. No IPL appearance or IPL 2026 squad mapping found in the supplied dataset. Not a Pakistani player. No IPL retirement issue identified in the supplied data. Treat him as a potential first-time IPL entrant; IPL 2027 auction registration and availability are not yet verified.",
+      "rr_fit": "Right-handed top-order batter from New Zealand who can be considered as an overseas opening option. In the supplied 2024–2026 T20 dataset, he scored 580 runs from 420 balls across 26 matches, averaging 25.22 at a strike rate of 138.10. He hit 52 fours and 22 sixes. His highest run volume came in 2025, with 317 runs from 212 balls across 10 matches. Offers an attacking batting option, but his average and consistency need further evaluation before considering him a priority signing. He has no bowling contribution recorded in the supplied dataset."
+    },
+    "Tim Seifert": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tom Banton": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Travis Head": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Trent Boult": {
+      "status": "retained",
+      "current_team": "Mumbai Indians",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tripurana Vijay": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tristan Stubbs": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Tushar Deshpande": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Umran Malik": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Urvil Patel": {
+      "status": "retained",
+      "current_team": "Chennai Super Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Usama Mir": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Usman Khan": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Usman Qadir": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Usman Tariq": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vaibhav Arora": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vaibhav Sooryavanshi": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Varun Aaron": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Varun Chakravarthy": {
+      "status": "retained",
+      "current_team": "Kolkata Knight Riders",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Venkatesh Iyer": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vignesh Puthur": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vijay Shankar": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vipraj Nigam": {
+      "status": "retained",
+      "current_team": "Delhi Capitals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Virat Kohli": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vishnu Vinod": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Vyshak Kumar": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Wanindu Hasaranga": {
+      "status": "retained",
+      "current_team": "Lucknow Super Giants",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Washington Sundar": {
+      "status": "retained",
+      "current_team": "Gujarat Titans",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "William Jacks": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Wriddhiman Saha": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Xavier Bartlett": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yash Dayal": {
+      "status": "retained",
+      "current_team": "Royal Challengers Bengaluru",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yash Dhull": {
+      "status": "pool",
+      "current_team": null,
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yash Punja": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yash Thakur": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yashasvi Jaiswal": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yudhvir Singh": {
+      "status": "rr_own",
+      "current_team": "Rajasthan Royals",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Yuzvendra Chahal": {
+      "status": "retained",
+      "current_team": "Punjab Kings",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    },
+    "Zakary Foulkes": {
+      "status": "no_ipl",
+      "current_team": "No team / not playing IPL",
+      "current_team_type": null,
+      "note": "",
+      "rr_fit": ""
+    },
+    "Zeeshan Ansari": {
+      "status": "retained",
+      "current_team": "Sunrisers Hyderabad",
+      "current_team_type": "ipl",
+      "note": "",
+      "rr_fit": ""
+    }
+  }
+}

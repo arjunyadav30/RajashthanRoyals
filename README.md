@@ -123,6 +123,12 @@ Sign in button, except Availability and RR Fit: those pages expose the complete
 status, team, note, and fit data to visitors. Sign-in is still required to edit,
 import, or download.
 
+The public Availability/RR Fit baseline is stored in
+`backend/data/public_status_seed.json` and seeds an empty SQLite database at
+startup. This restores the published baseline after an ephemeral Render restart;
+edits made after startup still need a persistent disk/database to survive a
+restart.
+
 - The header shows a **Log in** button; after signing in it becomes
   **Scout / Sign out**.
 - Password comes from `APP_PASSWORD` (default `royals2027`). Sessions are signed
