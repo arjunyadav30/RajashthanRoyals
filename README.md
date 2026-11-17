@@ -20,9 +20,9 @@ This repository currently contains:
 - **Add-on 5 (complete):** current team per player, team-aware filters and an
   Auction Board print view, plus status history/undo, bulk edit and JSON/CSV
   import-export.
-- **SQLite status store (complete):** every status/team/note edit is written to
-  `backend/data/app.db` through the API, with optimistic UI, a
-  Saving/Saved/Error indicator and Export/Import backup buttons.
+- **Persistent status store:** edits use SQLite locally by default, or managed
+  PostgreSQL when `DATABASE_URL` is configured. The UI provides optimistic
+  updates, a Saving/Saved/Error indicator and Export/Import backup buttons.
 - **Stats layer (complete):** offline batting/bowling aggregates for every
   player in `data_derived/stats`, a Stats tab on player and recent-form pages,
   a sortable/searchable Stats Explorer and a Data & Methods page.
@@ -303,7 +303,7 @@ data_derived/
 | GET | `/api/status/history/{name}` | Last 100 change entries for a player. |
 | POST | `/api/status/undo/{name}` | Undo the most recent change entry. |
 | GET | `/api/scores/meta` | Engine metadata: model metrics, leverage cutoff, shrinkage, bootstrap, sensitivity, reliability and validation summary. |
-| GET | `/api/health` | Readiness, missing score files, derived counts, SQLite status DB and stats file counts. |
+| GET | `/api/health` | Readiness, missing score files, derived counts, status DB and stats file counts. |
 
 CORS defaults to `http://localhost:5173` and `http://127.0.0.1:5173`; override with
 `FRONTEND_ORIGINS` (comma-separated). GET responses are cacheable for 120 seconds;
@@ -311,18 +311,28 @@ status/health are `no-store`.
 
 ## Availability layer and current team
 
-Edits live in SQLite at `backend/data/app.db` (override with `RR_STATUS_DB`).
-The database is created at startup and never reset; a legacy `status.json` is
-imported only once, when the status table is empty. It has two tables:
+Edits use SQLite at `backend/data/app.db` by default (override the file path
+with `RR_STATUS_DB`). Set `DATABASE_URL` to a managed PostgreSQL connection
+string to use PostgreSQL instead; the required driver is installed from
+`requirements.txt`. PostgreSQL tables are created at startup, and an empty
+status table is seeded from `backend/data/public_status_seed.json` (or legacy
+`status.json`) once. Configure `DATABASE_URL` in the hosting provider's
+environment settings and redeploy; do not commit credentials. When migrating
+existing edits, export a JSON backup from Availability before switching and
+import it after the PostgreSQL service is connected.
+
+The status store has three tables:
 
 - `player_status(name PK, status, current_team, current_team_type, note, rr_fit, updated_at)`
 - `status_history(id, name, field, old_value, new_value, changed_at)`
+- `team_xi(slug PK, players, updated_at)`
 
 Every edit in the UI calls the API and the workspace re-reads the API after
 each save (optimistic update with rollback, plus a Saving/Saved/Error
-indicator). Refreshing or restarting the backend never loses edits. Use
-**Export backup** / **Import backup** in Availability to move the whole status
-store as JSON; `app.db*` and `status.json` are gitignored.
+indicator). Use **Export backup** / **Import backup** in Availability to move
+the whole status store as JSON; `app.db*` and `status.json` are gitignored.
+SQLite on an ephemeral host filesystem can still lose edits on restart; use a
+persistent disk or managed PostgreSQL for deployed data.
 
 Allowed statuses: `retained`, `rr_own`, `no_ipl`, `pool`, `unknown`.
 
@@ -444,7 +454,7 @@ fallback; 1057 players). Re-run it only if the raw pack changes.
 - **Order:** batters by career position, then all-rounders, then bowlers. The
   default XI is a data-driven best selection, not a coach's tactical pick.
 - **XI editor:** signed-in scouts can replace any slot, reorder the XI and save
-  it per team; held in the `team_xi` table in `backend/data/app.db`. A custom XI
+  it per team; held in the `team_xi` table. A custom XI
   can be reset to the data-driven selection. The editor warns live when the XI
   loses its keeper or drops below 5 batting / 4 bowling options.
 - **Best fit:** for every slot the page suggests the best role replacements,

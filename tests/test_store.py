@@ -1,7 +1,37 @@
 import json
 from pathlib import Path
 
-from backend.store import Store
+from backend.store import Store, _ConnectionAdapter
+
+
+def test_postgres_connection_adapter_uses_psycopg_placeholders():
+    class RecordingConnection:
+        def __init__(self):
+            self.calls = []
+
+        def execute(self, query, parameters):
+            self.calls.append(("execute", query, parameters))
+
+        def executemany(self, query, parameters):
+            self.calls.append(("executemany", query, parameters))
+
+    raw_connection = RecordingConnection()
+    connection = _ConnectionAdapter(raw_connection, postgres=True)
+
+    connection.execute("SELECT * FROM player_status WHERE name = ?", ("Player",))
+    connection.executemany(
+        "INSERT INTO player_status(name) VALUES (?)",
+        [("Player 1",), ("Player 2",)],
+    )
+
+    assert raw_connection.calls == [
+        ("execute", "SELECT * FROM player_status WHERE name = %s", ("Player",)),
+        (
+            "executemany",
+            "INSERT INTO player_status(name) VALUES (%s)",
+            [("Player 1",), ("Player 2",)],
+        ),
+    ]
 
 
 def test_public_status_seed_restores_empty_database_without_overwriting_saved_changes(

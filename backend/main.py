@@ -201,7 +201,7 @@ def create_app(
     @app.get("/api/health")
     def health():
         payload = store.health()
-        payload["status_db"] = store.db_file.exists()
+        payload["status_db"] = store.database_available()
         payload["status_history"] = store.history_available()
         payload["stats_files"] = len(list(store.stats_dir.glob("*.json"))) if store.stats_dir.exists() else 0
         return payload

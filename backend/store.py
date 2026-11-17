@@ -11,6 +11,7 @@ import re
 import sqlite3
 import threading
 from collections import defaultdict
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -49,6 +50,22 @@ DEFAULT_ENTRY = {
 }
 
 _UNSET = object()
+
+
+class _ConnectionAdapter:
+    def __init__(self, connection, postgres: bool):
+        self.connection = connection
+        self.postgres = postgres
+
+    def execute(self, query: str, parameters=()):
+        if self.postgres:
+            query = query.replace("?", "%s")
+        return self.connection.execute(query, parameters)
+
+    def executemany(self, query: str, parameters):
+        if self.postgres:
+            query = query.replace("?", "%s")
+        return self.connection.executemany(query, parameters)
 
 
 def suggest_status_for_team(team: str | None) -> str | None:
@@ -331,6 +348,7 @@ class Store:
         status_file: str | Path | None = None,
         history_file: str | Path | None = None,
         db_file: str | Path | None = None,
+        database_url: str | None = None,
     ):
         self.root = Path(root) if root else Path(__file__).resolve().parents[1]
         self.rankings_dir = (
@@ -347,8 +365,17 @@ class Store:
         self.history_file = (
             Path(history_file) if history_file else self.root / "status_history.json"
         )
-        self.db_file = Path(db_file) if db_file else Path(
-            os.getenv("RR_STATUS_DB") or self.root / "backend" / "data" / "app.db"
+        self.database_url = database_url or (
+            None if db_file else os.getenv("DATABASE_URL")
+        )
+        if self.database_url and self.database_url.startswith("postgres://"):
+            self.database_url = "postgresql://" + self.database_url[len("postgres://") :]
+        self.db_file = (
+            None
+            if self.database_url
+            else Path(db_file)
+            if db_file
+            else Path(os.getenv("RR_STATUS_DB") or self.root / "backend" / "data" / "app.db")
         )
 
         self._lock = threading.RLock()
@@ -809,20 +836,41 @@ class Store:
         return self._rankings_message
 
     # ------------------------------------------------------------------
-    # SQLite status store
+    # Status store
     # ------------------------------------------------------------------
 
-    def _connect(self) -> sqlite3.Connection:
-        connection = sqlite3.connect(self.db_file, timeout=30)
-        connection.row_factory = sqlite3.Row
-        return connection
+    @contextmanager
+    def _connect(self):
+        if self.database_url:
+            import psycopg
+            from psycopg.rows import dict_row
+
+            connection = psycopg.connect(self.database_url, row_factory=dict_row)
+        else:
+            connection = sqlite3.connect(self.db_file, timeout=30)
+            connection.row_factory = sqlite3.Row
+        try:
+            yield _ConnectionAdapter(connection, postgres=bool(self.database_url))
+            connection.commit()
+        except Exception:
+            connection.rollback()
+            raise
+        finally:
+            connection.close()
 
     def _init_db(self) -> None:
-        self.db_file.parent.mkdir(parents=True, exist_ok=True)
+        if self.db_file:
+            self.db_file.parent.mkdir(parents=True, exist_ok=True)
         with self._lock, self._connect() as connection:
-            connection.execute("PRAGMA journal_mode=WAL")
-            connection.execute("PRAGMA busy_timeout=30000")
-            connection.executescript(
+            if not self.database_url:
+                connection.execute("PRAGMA journal_mode=WAL")
+                connection.execute("PRAGMA busy_timeout=30000")
+            history_id = (
+                "BIGSERIAL PRIMARY KEY"
+                if self.database_url
+                else "INTEGER PRIMARY KEY AUTOINCREMENT"
+            )
+            for statement in (
                 """
                 CREATE TABLE IF NOT EXISTS player_status (
                     name TEXT PRIMARY KEY,
@@ -832,29 +880,43 @@ class Store:
                     note TEXT NOT NULL DEFAULT '',
                     rr_fit TEXT NOT NULL DEFAULT '',
                     updated_at TEXT NOT NULL
-                );
+                )
+                """,
+                f"""
                 CREATE TABLE IF NOT EXISTS status_history (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    id {history_id},
                     name TEXT NOT NULL,
                     field TEXT NOT NULL,
                     old_value TEXT,
                     new_value TEXT,
                     changed_at TEXT NOT NULL
-                );
+                )
+                """,
+                """
                 CREATE INDEX IF NOT EXISTS idx_status_history_name
                     ON status_history(name, id);
+                """,
+                """
                 CREATE TABLE IF NOT EXISTS team_xi (
                     slug TEXT PRIMARY KEY,
                     players TEXT NOT NULL,
                     updated_at TEXT NOT NULL
-                );
-                """
-            )
-            count = connection.execute("SELECT COUNT(*) FROM player_status").fetchone()[0]
+                )
+                """,
+            ):
+                connection.execute(statement)
+            count = connection.execute(
+                "SELECT COUNT(*) AS player_count FROM player_status"
+            ).fetchone()["player_count"]
             if count == 0:
                 self._seed_from_json(connection)
 
-    def _seed_from_json(self, connection: sqlite3.Connection) -> None:
+    def database_available(self) -> bool:
+        with self._lock, self._connect() as connection:
+            connection.execute("SELECT 1")
+        return True
+
+    def _seed_from_json(self, connection: _ConnectionAdapter) -> None:
         """One-time import of legacy JSON files. Never runs against a seeded DB."""
         status = self._read_legacy_status()
         if not status:
@@ -1034,9 +1096,10 @@ class Store:
 
     def _write_status(self, status: dict[str, dict]) -> None:
         stamp = self._stamp_now()
+        distinct = "IS DISTINCT FROM" if self.database_url else "IS NOT"
         with self._lock, self._connect() as connection:
             connection.executemany(
-                """
+                f"""
                 INSERT INTO player_status
                     (name, status, current_team, current_team_type, note, rr_fit, updated_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -1047,11 +1110,11 @@ class Store:
                     note=excluded.note,
                     rr_fit=excluded.rr_fit,
                     updated_at=excluded.updated_at
-                WHERE player_status.status IS NOT excluded.status
-                   OR player_status.current_team IS NOT excluded.current_team
-                   OR player_status.current_team_type IS NOT excluded.current_team_type
-                   OR player_status.note IS NOT excluded.note
-                   OR player_status.rr_fit IS NOT excluded.rr_fit
+                WHERE player_status.status {distinct} excluded.status
+                   OR player_status.current_team {distinct} excluded.current_team
+                   OR player_status.current_team_type {distinct} excluded.current_team_type
+                   OR player_status.note {distinct} excluded.note
+                   OR player_status.rr_fit {distinct} excluded.rr_fit
                 """,
                 [
                     (
