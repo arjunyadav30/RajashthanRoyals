@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useAuth, LockIcon } from "../auth";
 import { LockBanner } from "../components/AuthGate";
-import { FlagBadge, FlagBadges, PlayerAvatar, RankChip, StatusPill } from "../components/Badges";
+import { FlagBadge, FlagBadges, PlayerAvatar, RankChip } from "../components/Badges";
 import CurrentTeamEditor from "../components/CurrentTeamEditor";
 import DataTable from "../components/DataTable";
 import Modal from "../components/Modal";
 import { EmptyState, ErrorNote, LoadingBlock, ReadyBanner } from "../components/States";
 import { IPL_TEAMS, NO_TEAM, RELEASED_TEAM, teamTypeFor } from "../teams";
-import { filterInactivePlayers } from "../availablePlayers";
+import { filterInactivePlayers, getIpl2026RosterTeam } from "../availablePlayers";
 import {
   compareValues,
   cx,
@@ -20,6 +20,8 @@ import {
   isNumber,
   normaliseName,
   PUBLIC_ROW_LIMIT,
+  STATUS_ORDER,
+  statusMeta,
 } from "../utils";
 
 const PHASES = ["Powerplay", "Middle", "Death"];
@@ -286,7 +288,7 @@ function Columns(role, showStatus, teamContext) {
             name={row.name}
             currentTeam={row.current_team}
             currentTeamType={row.current_team_type}
-            dataTeam={row.latest_IPL_team || row.latest_team}
+            dataTeam={row.ipl2026Team || row.latest_IPL_team || row.latest_team}
             dataTeams={teamContext.dataTeams}
             typedTeams={teamContext.typedTeams}
             status={row.status}
@@ -544,7 +546,19 @@ function Columns(role, showStatus, teamContext) {
       sortable: true,
       cell: (row) => (
         <div className="flex flex-col items-start gap-1">
-          <StatusPill status={row.status} />
+          <select
+            aria-label={`Availability status for ${row.name}`}
+            className="select h-8 w-[8.5rem] py-1 text-xs"
+            value={row.status}
+            disabled={teamContext.savingStatusNames.has(row.name)}
+            onChange={(event) => teamContext.onStatusChange(row, event.target.value)}
+          >
+            {STATUS_ORDER.map((status) => (
+              <option key={status} value={status}>
+                {statusMeta(status).label}
+              </option>
+            ))}
+          </select>
           {row.note ? (
             <span
               className="max-w-[11rem] truncate text-[10px] text-slate-400 dark:text-slate-500"
@@ -586,6 +600,7 @@ export default function RankingsPage({ role }) {
   const [filters, setFilters] = useState({
     search: "",
     availableOnly: true,
+    ipl2026Only: false,
     qualifiedOnly: false,
     lastMatch2026Only: false,
     phase: "",
@@ -602,6 +617,7 @@ export default function RankingsPage({ role }) {
   const [bulkSaving, setBulkSaving] = useState(false);
   const [bulkError, setBulkError] = useState(null);
   const [toast, setToast] = useState(null);
+  const [savingStatusNames, setSavingStatusNames] = useState(() => new Set());
 
   const load = useCallback(() => {
     setState((current) => ({ ...current, loading: true, error: null }));
@@ -624,6 +640,7 @@ export default function RankingsPage({ role }) {
           const playerId = String(row.player_id);
           return {
             ...row,
+            ipl2026Team: getIpl2026RosterTeam(row.name),
             clean_rank: cleanMap.get(playerId) ?? null,
             batter_rank: batterRankMap.get(playerId) ?? null,
             bowler_rank: bowlerRankMap.get(playerId) ?? null,
@@ -643,6 +660,32 @@ export default function RankingsPage({ role }) {
       });
   }, [role]);
 
+  const changeStatus = useCallback(
+    async (row, nextStatus) => {
+      if (!authenticated) {
+        openLogin();
+        return;
+      }
+      if (nextStatus === row.status) return;
+
+      setSavingStatusNames((current) => new Set(current).add(row.name));
+      try {
+        await api.updateStatus({ name: row.name, status: nextStatus });
+        setToast({ type: "ok", text: `${row.name} → ${statusMeta(nextStatus).label}.` });
+        await load();
+      } catch (error) {
+        setToast({ type: "error", text: error.message });
+      } finally {
+        setSavingStatusNames((current) => {
+          const next = new Set(current);
+          next.delete(row.name);
+          return next;
+        });
+      }
+    },
+    [authenticated, load, openLogin],
+  );
+
   useEffect(() => {
     setState({ loading: true, error: null, rows: [], ready: true, message: "" });
     setSelected(new Set());
@@ -652,6 +695,7 @@ export default function RankingsPage({ role }) {
     setFilters({
       search: "",
       availableOnly: true,
+      ipl2026Only: false,
       qualifiedOnly: false,
       lastMatch2026Only: false,
       phase: "",
@@ -702,6 +746,7 @@ export default function RankingsPage({ role }) {
       filters.minMatches === "" ? null : Math.max(0, Number(filters.minMatches) || 0);
     return state.rows.filter((row) => {
       if (filters.availableOnly && !row.available) return false;
+      if (filters.ipl2026Only && !row.ipl2026Team) return false;
       if (filters.qualifiedOnly && row.qualification_status !== "QUALIFIED") return false;
       if (filters.lastMatch2026Only && !row.last_match_date?.startsWith("2026-")) return false;
       if (filters.phase && row.dominant_phase !== filters.phase) return false;
@@ -727,8 +772,10 @@ export default function RankingsPage({ role }) {
         dataTeams: teamLists.dataTeams,
         typedTeams: teamLists.typedTeams,
         onChanged: load,
+        onStatusChange: changeStatus,
+        savingStatusNames,
       }),
-    [role, filters.availableOnly, teamLists, load],
+    [role, filters.availableOnly, teamLists, load, changeStatus, savingStatusNames],
   );
 
   const sortColumn = useMemo(
@@ -839,6 +886,7 @@ export default function RankingsPage({ role }) {
   const hasFilters =
     filters.search !== "" ||
     filters.availableOnly ||
+    filters.ipl2026Only ||
     filters.qualifiedOnly ||
     filters.lastMatch2026Only ||
     filters.phase !== "" ||
@@ -851,6 +899,7 @@ export default function RankingsPage({ role }) {
     setFilters({
       search: "",
       availableOnly: true,
+      ipl2026Only: false,
       qualifiedOnly: false,
       lastMatch2026Only: false,
       phase: "",
@@ -863,6 +912,7 @@ export default function RankingsPage({ role }) {
   };
 
   const availableCount = state.rows.filter((row) => row.available).length;
+  const ipl2026Count = state.rows.filter((row) => row.ipl2026Team).length;
   const qualifiedCount = state.rows.filter(
     (row) => row.qualification_status === "QUALIFIED",
   ).length;
@@ -1024,6 +1074,28 @@ export default function RankingsPage({ role }) {
           </div>
 
           <div className="flex flex-wrap items-end gap-2 lg:col-span-3">
+            <label className="flex h-[38px] cursor-pointer items-center gap-2 rounded-lg border border-slate-300 px-3 text-sm dark:border-slate-700">
+              <input
+                type="checkbox"
+                checked={filters.ipl2026Only}
+                onChange={(event) => {
+                  const ipl2026Only = event.target.checked;
+                  setFilters((current) => ({
+                    ...current,
+                    ipl2026Only,
+                    availableOnly: !ipl2026Only,
+                  }));
+                  setSort({
+                    key: ipl2026Only ? "all_rank" : "clean_rank",
+                    dir: "asc",
+                  });
+                }}
+                className="h-4 w-4 rounded border-slate-300 text-rr-600 focus:ring-rr-500 dark:border-slate-600 dark:bg-slate-800"
+              />
+              <span className="whitespace-nowrap text-xs font-medium text-slate-700 dark:text-slate-200">
+                IPL 2026 roster ({ipl2026Count})
+              </span>
+            </label>
             <label className="flex h-[38px] cursor-pointer items-center gap-2 rounded-lg border border-slate-300 px-3 text-sm dark:border-slate-700">
               <input
                 type="checkbox"

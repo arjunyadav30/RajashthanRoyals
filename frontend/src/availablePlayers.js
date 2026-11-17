@@ -19,6 +19,11 @@ function csvRows(csv) {
 const rosterRows = csvRows(rosterCsv);
 const inactiveRows = csvRows(inactiveCsv);
 const pakistanRows = csvRows(pakistanCsv);
+const rosterTeamByName = new Map(
+  rosterRows
+    .map(([name, team]) => [compactName(name), team])
+    .filter(([name, team]) => name && team),
+);
 const excludedNames = new Set();
 const excludedIds = new Set();
 const inactiveNames = new Set();
@@ -26,6 +31,10 @@ const inactiveIds = new Set();
 
 for (const [name] of rosterRows) {
   if (name) excludedNames.add(compactName(name));
+}
+
+export function getIpl2026RosterTeam(name) {
+  return rosterTeamByName.get(compactName(name)) ?? null;
 }
 
 for (const [playerId, name] of inactiveRows) {

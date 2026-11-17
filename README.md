@@ -153,7 +153,9 @@ restart.
   set" filters; a source-criteria qualification toggle (off by default)
   and separate all-player and qualified ranks; clean top 10 highlighted, ranks
   11–20 shaded as reserves; flag badges; CSV export of the filtered view; inline
-  current-team editor per row.
+  current-team editor per row. The IPL 2026 roster filter reveals matching players
+  across all availability states; the availability selector and current-team editor
+  let scouts mark released players directly from these lists.
 - **Player:** headline source score, pressure vs
   normal and component Recharts bars, sample/stability cards, 2026 form, an
   editable availability/`rr_fit` box, the current-team editor in the header, and
