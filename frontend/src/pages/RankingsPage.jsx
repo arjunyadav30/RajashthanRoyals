@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useAuth, LockIcon } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import { FlagBadge, FlagBadges, PlayerAvatar, RankChip } from "../components/Badges";
 import CurrentTeamEditor from "../components/CurrentTeamEditor";
 import DataTable from "../components/DataTable";
@@ -19,7 +18,6 @@ import {
   fmtPct,
   isNumber,
   normaliseName,
-  PUBLIC_ROW_LIMIT,
   STATUS_ORDER,
   statusMeta,
 } from "../utils";
@@ -815,7 +813,7 @@ export default function RankingsPage({ role }) {
     downloadCsv(filename, csvColumns(role), sorted);
   }, [authenticated, openLogin, plural, role, sorted]);
 
-  const tableRows = authenticated ? sorted : sorted.slice(0, PUBLIC_ROW_LIMIT);
+  const tableRows = sorted;
   const rowKey = (row) => `${role}-${row.player_id}`;
   const selectedRows = state.rows.filter((row) => selected.has(rowKey(row)));
   const visibleKeys = tableRows.map(rowKey);
@@ -1166,7 +1164,6 @@ export default function RankingsPage({ role }) {
           <span>
             Showing <strong className="num text-slate-700 dark:text-slate-200">{tableRows.length}</strong>{" "}
             of <span className="num">{state.rows.length}</span> ranked {plural}
-            {authenticated ? null : " (preview)"}
           </span>
           <span aria-hidden="true">·</span>
           <span>
@@ -1340,15 +1337,6 @@ export default function RankingsPage({ role }) {
             }
             caption={`${role} source analysis rankings with qualification and availability`}
           />
-
-          {authenticated ? null : (
-            <LockBanner
-              shown={tableRows.length}
-              total={sorted.length}
-              noun={plural}
-              className="m-4"
-            />
-          )}
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-200 px-4 py-3 text-[11px] text-slate-500 dark:border-slate-800 dark:text-slate-400">
             <span className="flex items-center gap-1.5">

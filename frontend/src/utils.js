@@ -1,5 +1,3 @@
-export const PUBLIC_ROW_LIMIT = 5;
-
 export function cx(...parts) {
   return parts.filter(Boolean).join(" ");
 }

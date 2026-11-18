@@ -842,7 +842,12 @@ def test_recent_exposes_current_team(client: TestClient):
 def test_auth_required_for_edits_and_downloads(client: TestClient):
     client.post("/api/auth/logout")
     assert client.get("/api/auth/me").json()["authenticated"] is False
-    assert client.get("/api/players?role=batter").status_code == 200
+    public_players = client.get("/api/players?role=batter&available_only=false")
+    assert public_players.status_code == 200
+    assert len(public_players.json()["players"]) == 25
+    public_status = client.get("/api/status")
+    assert public_status.status_code == 200
+    assert public_status.json()["players"]
     assert (
         client.put("/api/status", json={"name": "Batter 01", "note": "x"}).status_code
         == 401

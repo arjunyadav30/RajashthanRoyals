@@ -2,12 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useAuth, LockIcon } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import CurrentTeamEditor from "../components/CurrentTeamEditor";
 import { ErrorNote, LoadingBlock } from "../components/States";
 import { teamSourceLabel } from "../teams";
 import { filterInactivePlayers } from "../availablePlayers";
-import { cx, fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { cx, fmtInt, fmtNum } from "../utils";
 
 const SHORTLIST_SIZE = 10;
 
@@ -313,7 +312,7 @@ export default function AuctionBoardPage() {
         <div className="grid gap-4 lg:grid-cols-2">
           <BoardTable
             title="Batters"
-            rows={authenticated ? board.batter : board.batter.slice(0, PUBLIC_ROW_LIMIT)}
+            rows={board.batter}
             dataTeams={state.dataTeams}
             typedTeams={state.typedTeams}
             onChanged={() => load({ silent: true })}
@@ -321,7 +320,7 @@ export default function AuctionBoardPage() {
           />
           <BoardTable
             title="Bowlers"
-            rows={authenticated ? board.bowler : board.bowler.slice(0, PUBLIC_ROW_LIMIT)}
+            rows={board.bowler}
             dataTeams={state.dataTeams}
             typedTeams={state.typedTeams}
             onChanged={() => load({ silent: true })}
@@ -329,14 +328,6 @@ export default function AuctionBoardPage() {
           />
         </div>
       )}
-      {authenticated ? null : state.loading ? null : (
-        <LockBanner
-          shown={Math.min(board.batter.length + board.bowler.length, PUBLIC_ROW_LIMIT * 2)}
-          total={board.batter.length + board.bowler.length}
-          noun="board players"
-        />
-      )}
-
       <p className="text-[10px] leading-relaxed text-slate-400 no-print dark:text-slate-500">
         Shortlists use the clean rank (unavailable players and players whose last match was
         before 17 Nov 2024 removed, minimum-match filter applied) over the 0–100 auction rating.
@@ -384,7 +375,7 @@ export default function AuctionBoardPage() {
                 </p>
               ) : (
                 <ul className="space-y-2">
-                  {(authenticated ? removed : removed.slice(0, PUBLIC_ROW_LIMIT)).map((row) => (
+                  {removed.map((row) => (
                     <li
                       key={`${row.player_type}-${row.player_id}`}
                       className="rounded-xl border border-slate-200 p-3 text-xs dark:border-slate-800"
@@ -419,14 +410,6 @@ export default function AuctionBoardPage() {
                     </li>
                   ))}
                 </ul>
-              )}
-              {authenticated || removed.length === 0 ? null : (
-                <LockBanner
-                  shown={Math.min(removed.length, PUBLIC_ROW_LIMIT)}
-                  total={removed.length}
-                  noun="removed players"
-                  className="mt-3"
-                />
               )}
             </div>
           </aside>

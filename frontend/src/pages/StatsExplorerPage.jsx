@@ -2,10 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useAuth, LockIcon } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import DataTable from "../components/DataTable";
 import { EmptyState, ErrorNote, LoadingBlock } from "../components/States";
-import { fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { fmtInt, fmtNum } from "../utils";
 
 const BATTING_COLUMNS = [
   ["batting.matches", "Mat", "int"],
@@ -281,7 +280,7 @@ export default function StatsExplorerPage() {
 
   const meta = state.data?.meta || {};
   const threshold = state.data?.threshold_balls;
-  const tableRows = authenticated ? rows : rows.slice(0, PUBLIC_ROW_LIMIT);
+  const tableRows = rows;
 
   return (
     <div className="space-y-4">
@@ -434,9 +433,6 @@ export default function StatsExplorerPage() {
                 />
               }
             />
-            {authenticated ? null : (
-              <LockBanner shown={tableRows.length} total={rows.length} noun="players" className="m-4" />
-            )}
           </section>
         ) : (
           <EmptyState

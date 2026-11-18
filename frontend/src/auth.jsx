@@ -58,7 +58,7 @@ function LoginDialog({ open, onClose }) {
       <form onSubmit={submit} className="space-y-3">
         <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-[11px] text-slate-500 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-400">
           <LockGlyph className="h-4 w-4 shrink-0 text-rr-600 dark:text-rr-300" />
-          Public preview is limited to the first five rows of every table.
+          All dashboard data is viewable without signing in. Editing and downloads need the team password.
         </div>
         <div>
           <label htmlFor="login-password" className="label">

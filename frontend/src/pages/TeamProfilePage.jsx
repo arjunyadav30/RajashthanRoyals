@@ -2,11 +2,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api";
 import { useAuth, LockIcon } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import { FlagBadge, PlayerAvatar, RankChip, StatusPill } from "../components/Badges";
 import DataTable from "../components/DataTable";
 import { ErrorNote, LoadingBlock } from "../components/States";
-import { compareValues, cx, fmtDateTime, fmtInt, fmtNum, isNumber, PUBLIC_ROW_LIMIT } from "../utils";
+import { compareValues, cx, fmtDateTime, fmtInt, fmtNum, isNumber } from "../utils";
 
 const DIMENSIONS = [
   { key: "batting", label: "Batting", hint: "Average 0–100 rating of the top five XI batters" },
@@ -715,13 +714,10 @@ export default function TeamProfilePage() {
           <>
             <DataTable
               columns={xiColumns}
-              rows={authenticated ? team.xi : team.xi.slice(0, PUBLIC_ROW_LIMIT)}
+              rows={team.xi}
               rowKey={(row) => `${row.player_id}-${row.order}`}
               caption={`${team.name} best XI`}
             />
-            {authenticated ? null : (
-              <LockBanner shown={Math.min(team.xi.length, PUBLIC_ROW_LIMIT)} total={team.xi.length} noun="XI players" className="m-4" />
-            )}
           </>
         )}
       </section>
@@ -737,13 +733,10 @@ export default function TeamProfilePage() {
           </div>
           <DataTable
             columns={BenchColumns()}
-            rows={authenticated ? team.bench : team.bench.slice(0, PUBLIC_ROW_LIMIT)}
+            rows={team.bench}
             rowKey={(row) => `bench-${row.player_id}`}
             caption={`${team.name} bench`}
           />
-          {authenticated ? null : (
-            <LockBanner shown={Math.min(team.bench.length, PUBLIC_ROW_LIMIT)} total={team.bench.length} noun="bench players" className="m-4" />
-          )}
         </section>
 
         <section className="card p-5" aria-label="Notes">
@@ -783,16 +776,13 @@ export default function TeamProfilePage() {
           <>
             <DataTable
               columns={rosterColumns}
-              rows={authenticated ? sortedRoster : sortedRoster.slice(0, PUBLIC_ROW_LIMIT)}
+              rows={sortedRoster}
               sort={rosterSort}
               onSort={onRosterSort}
               rowKey={(row) => `roster-${row.player_id}`}
               rowClassName={(row) => (team.xi.some((pick) => pick.player_id === row.player_id) ? "bg-rr-50/60 dark:bg-rr-500/[0.07]" : undefined)}
               caption={`${team.name} full roster`}
             />
-            {authenticated ? null : (
-              <LockBanner shown={Math.min(sortedRoster.length, PUBLIC_ROW_LIMIT)} total={sortedRoster.length} noun="players" className="m-4" />
-            )}
           </>
         ) : null}
       </section>

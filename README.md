@@ -115,13 +115,10 @@ Vite proxies `/api` to the backend, so the app works in dev with no CORS setup
 or hard-coded API host. Override the target with `VITE_API_TARGET` if you run
 the API on another port. A production build is `cd frontend && npm run build`.
 
-## Access control (public preview vs signed-in)
+## Access control (public dashboard and signed-in edits)
 
-Everyone can read the dashboard without an account, but every table is limited
-to its first five rows and each list shows a "Preview mode" lock banner with a
-Sign in button, except Availability and RR Fit: those pages expose the complete
-status, team, note, and fit data to visitors. Sign-in is still required to edit,
-import, or download.
+Everyone can read all dashboard data without an account. Sign-in with the team
+password is required to edit, import, or download data.
 
 The public Availability/RR Fit baseline is stored in
 `backend/data/public_status_seed.json` and seeds an empty SQLite database at

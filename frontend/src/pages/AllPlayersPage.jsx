@@ -4,13 +4,11 @@ import { api } from "../api";
 import rosterCsv from "../data/ipl2026_players_current_teams.csv?raw";
 import inactiveCsv from "../data/players_last_match_before_17-11-2024.csv?raw";
 import pakistanCsv from "../data/pakistan_players_from_ball_by_ball.csv?raw";
-import { LockBanner } from "../components/AuthGate";
 import { PlayerAvatar } from "../components/Badges";
 import DataTable from "../components/DataTable";
 import { EmptyState, ErrorNote, LoadingBlock } from "../components/States";
-import { useAuth } from "../auth";
 import { isExcludedFromAvailable } from "../availablePlayers";
-import { compactName, fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { compactName, fmtInt, fmtNum } from "../utils";
 
 function parseCsv(csv) {
   const lines = csv.replace(/^\uFEFF/, "").trim().split(/\r?\n/);
@@ -208,7 +206,6 @@ function buildPakistanRows(pakistan, rankedPlayers, roster, inactive) {
 }
 
 export default function AllPlayersPage() {
-  const { authenticated } = useAuth();
   const [state, setState] = useState({
     loading: true,
     error: null,
@@ -450,7 +447,7 @@ export default function AllPlayersPage() {
           },
         ];
 
-  const visiblePlayers = authenticated ? players : players.slice(0, PUBLIC_ROW_LIMIT);
+  const visiblePlayers = players;
 
   return (
     <div className="space-y-6">
@@ -574,9 +571,6 @@ export default function AllPlayersPage() {
               }
               empty={<EmptyState title="No players match" hint="Try changing the search or filters." />}
             />
-            {!authenticated && players.length > PUBLIC_ROW_LIMIT ? (
-              <LockBanner shown={visiblePlayers.length} total={players.length} noun="players" />
-            ) : null}
           </>
         )}
       </section>

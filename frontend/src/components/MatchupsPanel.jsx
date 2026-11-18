@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../api";
-import { useAuth } from "../auth";
-import { LockBanner } from "./AuthGate";
 import { ErrorNote, LoadingBlock } from "./States";
-import { cx, fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { cx, fmtInt, fmtNum } from "../utils";
 
 const MIN_OPTIONS = [6, 12, 24];
 
@@ -16,7 +14,6 @@ function pct(value) {
 }
 
 export default function MatchupsPanel({ playerId, playerName, role = "batter" }) {
-  const { authenticated } = useAuth();
   const [state, setState] = useState({ loading: true, error: null, data: null });
   const [side, setSide] = useState(role === "bowler" ? "bowling" : "batting");
   const [minBalls, setMinBalls] = useState(6);
@@ -141,7 +138,7 @@ export default function MatchupsPanel({ playerId, playerName, role = "batter" })
               </tr>
             </thead>
             <tbody>
-              {(authenticated ? filtered : filtered.slice(0, PUBLIC_ROW_LIMIT)).map((row) => (
+              {filtered.map((row) => (
                 <tr
                   key={`${row.opponent_id}-${row.balls}`}
                   className="border-t border-slate-100 text-slate-700 odd:bg-white even:bg-slate-50/50 dark:border-slate-800 dark:text-slate-200 dark:odd:bg-slate-950 dark:even:bg-slate-900/40"
@@ -184,14 +181,6 @@ export default function MatchupsPanel({ playerId, playerName, role = "batter" })
           No {activeSide === "batting" ? "bowler" : "batter"} matchup has {minBalls}+ balls
           {query ? ` matching “${query}”` : ""}. Lower the minimum or clear the search.
         </p>
-      )}
-
-      {authenticated || filtered.length === 0 ? null : (
-        <LockBanner
-          shown={Math.min(filtered.length, PUBLIC_ROW_LIMIT)}
-          total={filtered.length}
-          noun="matchups"
-        />
       )}
 
       <p className="rounded-xl border border-dashed border-slate-300 p-3 text-[10px] leading-relaxed text-slate-500 dark:border-slate-700 dark:text-slate-400">

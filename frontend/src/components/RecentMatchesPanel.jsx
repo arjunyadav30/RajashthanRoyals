@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
-import { useAuth } from "../auth";
-import { LockBanner } from "./AuthGate";
 import { EmptyState, ErrorNote, LoadingBlock } from "./States";
-import { fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { fmtInt, fmtNum } from "../utils";
 
 const WINDOWS = [
   ["last5", "Last 5 matches"],
@@ -90,7 +88,6 @@ export default function RecentMatchesPanel({
   fetchOnMount = true,
   showFullLink = false,
 }) {
-  const { authenticated } = useAuth();
   const [state, setState] = useState({ loading: fetchOnMount, error: null, recent: null });
   const [windowKey, setWindowKey] = useState("last20");
 
@@ -135,9 +132,7 @@ export default function RecentMatchesPanel({
     windowKey === "career"
       ? matches
       : matches.slice(0, windowKey === "last5" ? 5 : windowKey === "last10" ? 10 : 20);
-  const visibleMatches = authenticated
-    ? matchesForWindow
-    : matchesForWindow.slice(0, PUBLIC_ROW_LIMIT);
+  const visibleMatches = matchesForWindow;
 
   return (
     <div className="space-y-4">
@@ -209,14 +204,6 @@ export default function RecentMatchesPanel({
             </tbody>
           </table>
         </div>
-        {authenticated ? null : (
-          <LockBanner
-            shown={visibleMatches.length}
-            total={matchesForWindow.length}
-            noun="matches"
-            className="mt-3"
-          />
-        )}
         {error ? <p className="mt-3 text-[10px] text-amber-700 dark:text-amber-400">{error}</p> : null}
       </section>
     </div>

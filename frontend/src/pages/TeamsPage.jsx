@@ -1,11 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
-import { useAuth } from "../auth";
-import { LockBanner } from "../components/AuthGate";
 import { RankChip } from "../components/Badges";
 import { EmptyState, ErrorNote, LoadingBlock } from "../components/States";
-import { cx, fmtInt, fmtNum, PUBLIC_ROW_LIMIT } from "../utils";
+import { cx, fmtInt, fmtNum } from "../utils";
 
 const CARD_METRICS = [
   { key: "batting", label: "Batting" },
@@ -145,7 +143,6 @@ function TeamCard({ team }) {
 }
 
 export default function TeamsPage() {
-  const { authenticated } = useAuth();
   const [state, setState] = useState({ loading: true, error: null, payload: null, empty: false });
 
   const load = useCallback(() => {
@@ -231,19 +228,10 @@ export default function TeamsPage() {
       ) : (
         <>
           <div className="grid gap-4 lg:grid-cols-2">
-            {(state.payload?.teams ?? [])
-              .slice(0, authenticated ? undefined : PUBLIC_ROW_LIMIT)
-              .map((team) => (
-                <TeamCard key={team.slug} team={team} />
-              ))}
+            {(state.payload?.teams ?? []).map((team) => (
+              <TeamCard key={team.slug} team={team} />
+            ))}
           </div>
-          {authenticated ? null : (
-            <LockBanner
-              shown={Math.min(summary.teams, PUBLIC_ROW_LIMIT)}
-              total={summary.teams}
-              noun="teams"
-            />
-          )}
           <p className="text-[11px] leading-relaxed text-slate-400 dark:text-slate-500">
             Squads come from the current-team field you set in{" "}
             <Link to="/availability" className="link">

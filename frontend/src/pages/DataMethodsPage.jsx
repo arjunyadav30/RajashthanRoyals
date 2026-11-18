@@ -526,16 +526,14 @@ export default function DataMethodsPage() {
 
       <section className="card p-5">
         <h2 className="text-sm font-bold text-slate-900 dark:text-white">
-          Public preview and signed-in access
+          Public dashboard and signed-in access
         </h2>
         <p className="mt-2 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-          Every aggregate stays readable without an account, but public views are limited to the
-          first five rows of each table with a lock banner and a Log in button. Signing in with the
-          team password reveals all rows and unlocks edits (availability, current team, notes, bulk,
-          undo, import) and downloads (CSV exports, status backup, print/PDF). The API enforces the
-          same rule: write and download endpoints return 401 without a valid session cookie, so the
-          lock is not just a UI detail. Sessions last 12 hours; recent form still never feeds the
-          engine score.
+          All dashboard data is readable without an account. Signing in with the team password
+          unlocks edits (availability, current team, notes, bulk, undo, import) and downloads (CSV
+          exports, status backup, print/PDF). The API enforces the same rule: write and download
+          endpoints return 401 without a valid session cookie, so the lock is not just a UI detail.
+          Sessions last 12 hours; recent form still never feeds the engine score.
         </p>
       </section>
 
